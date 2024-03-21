@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Task from './Task';
 import TaskForm from './TaskForm';
+import Calendar from './Calendar';
 
 function App() {
   const [tasks, setTasks] = useState([
@@ -17,6 +18,7 @@ function App() {
       {tasks.map(task => (
         <Task key={task.id} task={task} />
       ))}
+      <Calendar />
     </div>
   );
 }
